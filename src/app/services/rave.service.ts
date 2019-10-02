@@ -10,7 +10,16 @@ export class RaveService {
   raves = [
     new Rave(1, "azumi", "testtest"),
     new Rave(2, "azumi", "testtest"),
-    new Rave(3, "azumi", "testtest")
+    new Rave(3, "azumi", "testtest"),
+    new Rave(1, "azumi", "testtest"),
+    new Rave(2, "azumi", "testtest"),
+    new Rave(3, "azumi", "testtest"),
+    new Rave(1, "azumi", "testtest"),
+    new Rave(2, "azumi", "testtest"),
+    new Rave(3, "azumi", "testtest"),
+    new Rave(1, "azumi", "testtest"),
+    new Rave(2, "azumi", "testtest"),
+    new Rave(3, "azumi", "testtest"),
   ];
 
   constructor() { }

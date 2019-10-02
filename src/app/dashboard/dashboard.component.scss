@@ -1,9 +1,13 @@
-:host {
-  position: absolute;
+.dashboard {
+  // position: fixed;
+  // overflow: scroll;
+  // top: 0;
+  // left: 0;
+  // right: -15px;
+  // bottom: -15px;
   width: 100%;
-  height: 100%;
   margin: 0;
-  padding: 0;
+  padding-top: 60px;
   border: 0;
   background-color: #3f3f3f;
 }
