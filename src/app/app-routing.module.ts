@@ -1,23 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { PublicRavesComponent } from './public-raves/public-raves.component';
-import { UserComponent } from './user/user.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-
 const routes: Routes = [
   {
-    "path": "",
-    "component": DashboardComponent
+    path: "",
+    loadChildren: () => import("./dashboard/dashboard.module").then(m => m.DashboardModule),
   },
   {
-    "path": "user/:id",
-    "component": UserComponent
-  }
+    path: "**",
+    redirectTo: "",
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }
