@@ -1,1 +1,10 @@
-<p>user works!</p>
+<div class="user-bio">
+  <div class="user-profile">
+    <p>{{user.userName}} <span>@{{user.userId}}</span></p>
+  </div>
+  <div class="rave-list">
+    <div class="vertical-item" *ngFor="let rave of raves">
+      <app-rave [rave]=rave></app-rave>
+    </div>
+  </div>
+</div>

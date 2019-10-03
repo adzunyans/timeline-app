@@ -1,0 +1,15 @@
+@import "~src/styles.scss";
+
+.user-bio {
+  @extend .one-column-layout;
+
+  .user-profile {
+    background-color: #fff;
+    @extend .item-component;
+
+    +.rave-list {
+      margin-top: 20px;
+    }
+  }
+
+}

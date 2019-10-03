@@ -1,17 +1,5 @@
 @import "~src/styles.scss";
 
 .rave-list {
-  width: 480px;
-  height: 100%;
-  margin: 0 auto;
-  padding: 0 0.5% 20px;
-  // background-color: $themeColor;
-  box-sizing: border-box;
-
-  .item {
-
-    +.item {
-      margin-top: 5px;
-    }
-  }
+  @extend .one-column-layout;
 }

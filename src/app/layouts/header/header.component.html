@@ -1,3 +1,8 @@
 <div>
-  <a class="name" routerLink="user/{{user.id}}">{{user.userName}}</a>
+  <a class="home" routerLink="/">
+    <img [src]="homeImgSrc" alt="">
+  </a>
+</div>
+<div>
+  <a class="name" [routerLink]="['/user', user.userId]">{{user.userName}}</a>
 </div>
