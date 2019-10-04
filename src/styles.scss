@@ -18,11 +18,12 @@ $subColor: #18a2b4;
   // background-color: $themeColor;
   box-sizing: border-box;
 
-  .vertical-item {
+}
 
-    +.vertical-item {
-      margin-top: 5px;
-    }
+.vertical-item {
+
+  +.vertical-item {
+    margin-top: 5px;
   }
 }
 

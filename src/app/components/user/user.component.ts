@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from './user';
-import { UserService } from '../services/user.service';
-import { Rave } from '../rave/rave';
-import { RaveService } from '../services/rave.service';
+import { User } from '@model/user';
+import { UserService } from '@service/user.service';
+import { Rave } from '@model/rave';
+import { RaveService } from '@service/rave.service';
 
 @Component({
   selector: 'app-user',

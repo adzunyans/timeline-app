@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Rave } from '../rave/rave';
-import { RaveService } from '../services/rave.service';
+import { Rave } from '@model/rave';
+import { RaveService } from '@service/rave.service';
 
 @Component({
   selector: 'app-public-raves',

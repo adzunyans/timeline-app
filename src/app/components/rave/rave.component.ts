@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Rave } from './rave';
+import { Rave } from '@model/rave';
 @Component({
   selector: 'app-rave',
   templateUrl: './rave.component.html',

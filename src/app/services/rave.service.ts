@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { Rave } from '../rave/rave';
-import { User } from '../user/user';
+import { Rave } from '@model/rave';
+import { User } from '@model/user';
 
 import { Observable, of, from } from 'rxjs';
 import { filter } from 'rxjs/operators';
@@ -32,12 +32,16 @@ export class RaveService {
     return of(this.raves);
   }
 
-  findByUserId(user: User) {
+  findByUserId(user: User): Observable<Rave> {
     return from(this.raves).pipe(
       filter((rave: Rave) => rave.userId === user.userId));
   }
 
   get(id: number): Observable<Rave> {
     return of(this.raves[id - 1]);
+  }
+
+  add(rave: Rave): void {
+    this.raves.push(rave);
   }
 }

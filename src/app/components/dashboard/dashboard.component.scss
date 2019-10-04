@@ -1,3 +1,5 @@
+@import "~src/styles.scss";
+
 .dashboard {
   // position: fixed;
   // overflow: scroll;
@@ -10,4 +12,12 @@
   padding-top: 60px;
   border: 0;
   background-color: #3f3f3f;
+}
+
+.dashboard-content {
+  @extend .one-column-layout;
+
+  .rave-stage-component {
+    margin-bottom: 20px;
+  }
 }
