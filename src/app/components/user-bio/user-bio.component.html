@@ -1,11 +1,22 @@
 <div class="user-bio">
-  <div>
-    <input type="text" [formControl]="userName" value="{{ (user$ | async)?.userName}}">
-    value: {{ userName.value }}
-  </div>
-  <div>
-    @<input typr="text" value="{{ (user$ | async)?.userId }}">
-  </div>
-  <p>{{ (user$ | async)?.desc }}</p>
-  <button class="button-edit" (click)="toggleEdit()">edit</button>
+  <form [formGroup]="userForm">
+    <div>
+      <input type="text" formControlName="name" required maxlength="20">
+      <span>value: {{ userForm.controls.name.value }}</span>
+      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="warn">
+        <div *ngIf="name.errors.required">入力してください</div>
+        <div *ngIf="name.errors.maxlength">20文字以内で入力してください</div>
+      </div>
+    </div>
+    <div>
+      @<input type="text" formControlName="id" required>
+      <span>value: {{ userForm.controls.id.value }}</span>
+      <div *ngIf="id.invalid && (id.dirty || id.touched)" class="warn">
+        <div *ngIf="id.errors.required">入力してください</div>
+        <div *ngIf="id.errors.min">1以上</div>
+      </div>
+    </div>
+    <input type="text" formControlName="desc">
+    <!-- <button class="button-edit" (click)="toggleEdit()">edit</button> -->
+  </form>
 </div>

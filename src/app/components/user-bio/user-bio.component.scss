@@ -3,4 +3,22 @@
 .user-bio {
   background-color: #fff;
   @extend .item-component;
+
+  position: relative;
+
+  .button-edit {
+    position: absolute;
+    top: $itemComponentPaddingTop;
+    right: $itemComponentPaddingLeft;
+  }
+
+  .warn {
+    color: #ff4444;
+  }
+
+  input {
+    width: 100%;
+    margin: 0;
+
+  }
 }

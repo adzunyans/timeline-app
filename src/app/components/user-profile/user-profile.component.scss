@@ -1,16 +1,7 @@
 @import "~src/styles.scss";
 
 .user-profile {
-
-  position: relative;
-
   .rave-list {
     margin-top: 20px;
-  }
-
-  .button-edit {
-    position: absolute;
-    top: $itemComponentPaddingTop;
-    right: $itemComponentPaddingLeft;
   }
 }
