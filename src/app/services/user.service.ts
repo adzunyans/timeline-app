@@ -9,7 +9,8 @@ export class UserService {
 
   user: User = {
     userId: 1,
-    userName: "azumi"
+    userName: "azumi",
+    desc: "hogehoge"
   }
 
   constructor() { }

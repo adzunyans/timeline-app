@@ -4,7 +4,7 @@ import { Rave } from '@model/rave';
 import { User } from '@model/user';
 
 import { Observable, of, from } from 'rxjs';
-import { filter } from 'rxjs/operators';
+import { filter, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -32,9 +32,9 @@ export class RaveService {
     return of(this.raves);
   }
 
-  findByUserId(user: User): Observable<Rave> {
-    return from(this.raves).pipe(
-      filter((rave: Rave) => rave.userId === user.userId));
+  findByUserId(user: User): Observable<Rave[]> {
+    return of(this.raves).pipe(
+      map((rave: Rave[]) => rave.filter(v => v.userId === user.userId)));
   }
 
   get(id: number): Observable<Rave> {

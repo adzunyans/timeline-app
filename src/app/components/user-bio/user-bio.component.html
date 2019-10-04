@@ -1,0 +1,11 @@
+<div class="user-bio">
+  <div>
+    <input type="text" [formControl]="userName" value="{{ (user$ | async)?.userName}}">
+    value: {{ userName.value }}
+  </div>
+  <div>
+    @<input typr="text" value="{{ (user$ | async)?.userId }}">
+  </div>
+  <p>{{ (user$ | async)?.desc }}</p>
+  <button class="button-edit" (click)="toggleEdit()">edit</button>
+</div>

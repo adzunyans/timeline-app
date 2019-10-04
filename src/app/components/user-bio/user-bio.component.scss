@@ -1,0 +1,6 @@
+@import "~src/styles.scss";
+
+.user-bio {
+  background-color: #fff;
+  @extend .item-component;
+}
