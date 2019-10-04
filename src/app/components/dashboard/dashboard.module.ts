@@ -7,7 +7,7 @@ import { PublicRavesComponent } from '../public-raves/public-raves.component';
 import { HeaderComponent } from '../layouts/header/header.component';
 import { RaveComponent } from '../rave/rave.component';
 import { CommonModule } from '@angular/common';
-import { UserComponent } from '../user/user.component';
+import { UserProfileComponent } from '../user-profile/user-profile.component';
 import { RaveStageComponent } from '../rave-stage/rave-stage.component';
 
 @NgModule({
@@ -16,7 +16,7 @@ import { RaveStageComponent } from '../rave-stage/rave-stage.component';
     PublicRavesComponent,
     HeaderComponent,
     RaveComponent,
-    UserComponent,
+    UserProfileComponent,
     RaveStageComponent,
   ],
   imports: [

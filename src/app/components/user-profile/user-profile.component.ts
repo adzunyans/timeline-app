@@ -6,10 +6,10 @@ import { RaveService } from '@service/rave.service';
 
 @Component({
   selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss']
+  templateUrl: './user-profile.component.html',
+  styleUrls: ['./user-profile.component.scss']
 })
-export class UserComponent implements OnInit {
+export class UserProfileComponent implements OnInit {
 
   user: User;
   raves: Rave[];
