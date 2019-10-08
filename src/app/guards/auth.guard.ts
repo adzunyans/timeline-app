@@ -17,13 +17,13 @@ export class AuthGuard implements CanActivate {
     return this.afAuth.authState.pipe(
       take(1),
       map((loginUser: firebase.User) => {
-        // if (!!loginUser && !!loginUser.email && loginUser.email.length > 0) {
-        //   return true;
-        // }
+        if (!!loginUser && !!loginUser.email && loginUser.email.length > 0) {
+          return true;
+        }
 
-        // this.router.navigate(['/auth/signup']);
+        this.router.navigateByUrl('/auth/signup', { skipLocationChange: true });
 
-        return true;
+        return false;
       })
     );
   }

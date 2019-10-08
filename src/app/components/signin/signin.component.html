@@ -1,6 +1,6 @@
-<div class="signup-form-container">
-  <div class="signup-form-component">
-    <form [formGroup]="createForm">
+<div class="signin-form-container">
+  <div class="signin-form-component">
+    <form [formGroup]="signinForm">
       <div class="email-form">
         <div>
           <label for="email">メールアドレス</label>
@@ -22,12 +22,12 @@
           <!-- <span *ngIf="password.errors.max">16文字以内で入力してください</span> -->
         </div>
       </div>
-      <div class="submit-button" (click)="submit()" [class.disabled]="createForm.invalid">サインアップ</div>
+      <div class="submit-button" (click)="submit()" [class.disabled]="signinForm.invalid">サインイン</div>
       <div class="warn">{{ errorMessage }}</div>
     </form>
   </div>
-  <div class="signin-link">
-    <a routerLink="/auth/signin">サインインはこちら</a>
+  <div class="signup-link">
+    <a routerLink="/auth/signup">サインアップはこちら</a>
 
   </div>
 </div>

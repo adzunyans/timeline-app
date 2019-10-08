@@ -4,13 +4,13 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.scss']
+  selector: 'app-signin',
+  templateUrl: './signin.component.html',
+  styleUrls: ['./signin.component.scss']
 })
-export class SignupComponent implements OnInit {
+export class SigninComponent implements OnInit {
   errorMessage: string;
-  createForm: FormGroup = this.fb.group({
+  signinForm: FormGroup = this.fb.group({
     email: ['', Validators.email],
     password: ['', Validators.min(6)],
   })
@@ -18,25 +18,25 @@ export class SignupComponent implements OnInit {
     private fb: FormBuilder,
     private router: Router,
     private afAuth: AngularFireAuth) {
-    this.errorMessage = "";
   }
 
   ngOnInit() {
   }
 
   get email() {
-    return this.createForm.get('email');
+    return this.signinForm.get('email');
   }
 
   get password() {
-    return this.createForm.get('password');
+    return this.signinForm.get('password');
   }
 
   submit() {
-    if (this.createForm.valid) {
-      this.afAuth.auth.createUserWithEmailAndPassword(this.createForm.get('email').value, this.createForm.get('password').value)
+    if (this.signinForm.valid) {
+      this.afAuth.auth.signInWithEmailAndPassword(this.signinForm.get('email').value, this.signinForm.get('password').value)
         .then(() => {
-          this.router.navigateByUrl('/auth/signin', { skipLocationChange: true });
+          console.log("ログイン成功");
+          this.router.navigateByUrl('/', { skipLocationChange: false });
         }).catch(error => {
           console.log(`${error.code} , ${error.message}`);
           this.errorMessage = error.message;
