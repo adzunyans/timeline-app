@@ -21,7 +21,7 @@ export class AuthGuard implements CanActivate {
           return true;
         }
 
-        this.router.navigateByUrl('/auth/signup', { skipLocationChange: true });
+        this.router.navigateByUrl('/auth/signup', { skipLocationChange: false });
 
         return false;
       })
