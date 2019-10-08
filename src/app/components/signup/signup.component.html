@@ -1,0 +1,29 @@
+<div class="signup-form-container">
+  <div class="signup-form-component">
+    <form [formGroup]="createForm">
+      <div class="email-form">
+        <div>
+          <label for="email">メールアドレス</label>
+        </div>
+        <input id="email" type="text" formControlName="email" required>
+        <div *ngIf="email.invalid && (email.durty || email.touched)" class="warn">
+          <span *ngIf="email.errors.required">メールアドレスを入力してください</span>
+          <span *ngIf="email.errors.email">正しくない形式です</span>
+        </div>
+      </div>
+      <div class="password-form">
+        <div>
+          <label for="password">パスワード</label>
+        </div>
+        <input id="password" type="password" formControlName="password" required>
+        <div *ngIf="password.invalid && (password.durty || password.touched)" class="warn">
+          <!-- <span *ngIf="password.errors.required">パスワードを入力してください</span> -->
+          <span *ngIf="password.errors.min">6文字以上入力してください</span>
+          <!-- <span *ngIf="password.errors.max">16文字以内で入力してください</span> -->
+        </div>
+      </div>
+      <div class="submit-button" (click)="submit()" [class.disabled]="createForm.invalid">登録</div>
+      <div class="warn">{{ errorMessage }}</div>
+    </form>
+  </div>
+</div>

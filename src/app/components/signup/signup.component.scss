@@ -1,0 +1,53 @@
+@import "~src/styles.scss";
+
+.signup-form-container {
+  @extend .one-column-layout;
+
+  .signup-form-component {
+    @extend .item-component;
+
+    .password-form {
+      margin-top: 12px;
+    }
+
+    input {
+      width: 100%;
+      display: block;
+      box-sizing: border-box;
+      padding: 0.4rem 0;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      outline: none;
+
+      &:focus {
+        border: 1px solid #aaa;
+      }
+
+    }
+
+    .submit-button {
+      margin-top: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 4px 8px;
+      font-size: 1.0rem;
+      line-height: 1;
+      display: inline-block;
+      cursor: pointer;
+
+      &:active {
+        border: 1px solid #aaa;
+      }
+
+      &.disabled {
+        opacity: 0.5;
+      }
+    }
+
+    .warn {
+      color: #ac0505;
+    }
+  }
+
+}

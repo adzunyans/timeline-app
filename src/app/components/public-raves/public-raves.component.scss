@@ -1,5 +1,9 @@
 @import "~src/styles.scss";
 
+.rave-stage-component {
+  margin-bottom: 20px;
+}
+
 .rave-list {
   @extend .vertical-item;
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FirebaseService } from '@service/firebase.service';
+// import { FirebaseService } from '@service/firebase.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -9,9 +9,11 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    const firebase = new FirebaseService();
+    // const firebase = new FirebaseService();
+    // firebase.initFirebase();
+    // firebase.connectDb();
     // firebase.setUser();
-    firebase.getAllData();
+    // firebase.getAllData();
   }
 
 }
